@@ -14,14 +14,14 @@ void ordenar(int A[],int n)
 	int temp,j;
 	for (int i=1; i<n; i++)
 	{
-    	temp = A[i];
-        j = i - 1;
+    		temp = A[i];
+        	j = i - 1;
 		while ( (A[j] > temp) && (j >= 0) ){
-    		A[j+1] = A[j];
-    		j--;
-    	}
-    	A[j+1]= temp;
-    }
+    			A[j+1] = A[j];
+    			j--;
+    		}
+    		A[j+1]= temp;
+    		}
 }
 void mostrar(int A[],int n)
 {
@@ -32,7 +32,7 @@ void mostrar(int A[],int n)
 }
 int main(){
 	int n;
-	cout<<"tamaño de arreglo? ";cin>>n;
+	cout<<"tamaÃ±o de arreglo? ";cin>>n;
 	int A[n];
 	crear(A,n);
 	ordenar(A,n);
