@@ -1,15 +1,16 @@
 
+
 #include <iostream>
 using namespace std;
 void crearmatrizA(int A[20][20],int k,int m)
 {
 	for(int i=0; i<k; ++i){
-       		for(int j=0; j<m; ++j)
+        	for(int j=0; j<m; ++j)
         	{
             		cout<<"Ingrese valor para A["<<i<<"]["<<j<<"]: ";
             		cin>>A[i][j];
         	}
-        	cout<<"\n";
+      		cout<<"\n";
 	}
 }
  void crearmatrizB(int B[20][20],int o,int n)
@@ -18,10 +19,10 @@ void crearmatrizA(int A[20][20],int k,int m)
     	{
         	for(int j=0; j<n; ++j)
         	{
-            		cout<<"Ingrese valor para B["<<i<<"]["<<j<<"]: ";
+           		cout<<"Ingrese valor para B["<<i<<"]["<<j<<"]: ";
             		cin>>B[i][j];
-       		}
-        	cout<<"\n";
+        	}
+        cout<<"\n";
 	}
  }
  void mostrarmatricesAyB(int A[20][20],int k,int m,int B[20][20],int o,int n)
@@ -31,10 +32,10 @@ void crearmatrizA(int A[20][20],int k,int m)
     	{
         	for(int j=0; j<m; ++j)
         	{
-            		cout<<A[i][j]<<" ";
+		    cout<<A[i][j]<<" ";
         	}
         cout<<endl;
-    	}
+   	}
 
     	cout<<"Matriz B: "<<endl;
     	for(int i=0; i<o; ++i)
@@ -54,7 +55,7 @@ void inicializarC(int C[20][20],int k,int n)
 	{
 		for(int j=0;j<n;j++)
 		{
-			C[i][j]=s;
+			C[i][j]=0;
 		}
 		cout<<"\n";
 	}
@@ -67,12 +68,12 @@ void multiplicacion(int A[20][20],int k,int m,int B[20][20],int o,int n,int C[20
 	    	// Generamos la matriz C.
     		for(int i=0; i<k; ++i){
         		for(int j=0; j<n; ++j){
-        			int s=0;
+        			C[i][j]=0;
             			for(int z=0; z<m; ++z){
                 			C[i][j]+= A[i][z] * B[z][j];
             			}
         		}
-        	}
+       		}
 	}
 }
 void mostrarC(int C[20][20],int k,int n)
@@ -108,4 +109,3 @@ int main()
 	mostrarC(C,k,n);
     return 0;
 }
-
