@@ -31,7 +31,7 @@ void crearmatrizA(int A[20][20],int k,int m)
     	{
         	for(int j=0; j<m; ++j)
         	{
-            	cout<<A[i][j]<<" ";
+            		cout<<A[i][j]<<" ";
         	}
         cout<<endl;
     	}
@@ -41,7 +41,7 @@ void crearmatrizA(int A[20][20],int k,int m)
     	{
         	for(int j=0; j<n; ++j)
         	{
-            	cout<<B[i][j]<<" ";
+            		cout<<B[i][j]<<" ";
         	}
         cout<<endl;
     	}
