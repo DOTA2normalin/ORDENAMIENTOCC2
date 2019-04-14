@@ -55,7 +55,7 @@ void multiplicacion(int A[20][20],int k,int m,int B[20][20],int o,int n,int C[20
     		for(int i=0; i<k; ++i){
         		for(int j=0; j<n; ++j){
         			C[i][j]=0;
-            			for(int z=0; z<m; ++z){
+            			for(int z=0; z<o; ++z){
                 			C[i][j]+= A[i][z] * B[z][j];
             			}
         		}
