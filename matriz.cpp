@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 using namespace std;
 void crearmatrizA(int A[20][20],int k,int m)
@@ -10,7 +8,7 @@ void crearmatrizA(int A[20][20],int k,int m)
             		cout<<"Ingrese valor para A["<<i<<"]["<<j<<"]: ";
             		cin>>A[i][j];
         	}
-      		cout<<"\n";
+        	cout<<"\n";
 	}
 }
  void crearmatrizB(int B[20][20],int o,int n)
@@ -19,10 +17,10 @@ void crearmatrizA(int A[20][20],int k,int m)
     	{
         	for(int j=0; j<n; ++j)
         	{
-           		cout<<"Ingrese valor para B["<<i<<"]["<<j<<"]: ";
+            		cout<<"Ingrese valor para B["<<i<<"]["<<j<<"]: ";
             		cin>>B[i][j];
         	}
-        cout<<"\n";
+        	cout<<"\n";
 	}
  }
  void mostrarmatricesAyB(int A[20][20],int k,int m,int B[20][20],int o,int n)
@@ -32,10 +30,10 @@ void crearmatrizA(int A[20][20],int k,int m)
     	{
         	for(int j=0; j<m; ++j)
         	{
-		    cout<<A[i][j]<<" ";
+            		cout<<A[i][j]<<" ";
         	}
-        cout<<endl;
-   	}
+        	cout<<endl;
+    	}
 
     	cout<<"Matriz B: "<<endl;
     	for(int i=0; i<o; ++i)
@@ -44,28 +42,16 @@ void crearmatrizA(int A[20][20],int k,int m)
         	{
             		cout<<B[i][j]<<" ";
         	}
-        cout<<endl;
+        	cout<<endl;
     	}
 
-}
-void inicializarC(int C[20][20],int k,int n)
-{
-	int s=0;
-	for(int i=0;i<k;i++)
-	{
-		for(int j=0;j<n;j++)
-		{
-			C[i][j]=0;
-		}
-		cout<<"\n";
-	}
 }
 void multiplicacion(int A[20][20],int k,int m,int B[20][20],int o,int n,int C[20][20])
 {
 	
 	if (m==o){
 
-	    	// Generamos la matriz C.
+	    // Generamos la matriz C.
     		for(int i=0; i<k; ++i){
         		for(int j=0; j<n; ++j){
         			C[i][j]=0;
@@ -73,7 +59,8 @@ void multiplicacion(int A[20][20],int k,int m,int B[20][20],int o,int n,int C[20
                 			C[i][j]+= A[i][z] * B[z][j];
             			}
         		}
-       		}
+        		cout<<"\n";
+       	 	}
 	}
 	else{
 		cout<<"no se puede multiplicar las dos matrices A y B ingrese los datos correctos";
@@ -106,7 +93,6 @@ int main()
     crearmatrizA(A,k,m);
     crearmatrizB(B,o,n);
 	mostrarmatricesAyB(A,k,m,B,o,n);
-	inicializarC(C,k,n);
 	multiplicacion(A,k,m,B,o,n,C);
 	cout<<"Nueva Matriz C:"<<endl;  
 	mostrarC(C,k,n);
