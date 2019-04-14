@@ -75,6 +75,9 @@ void multiplicacion(int A[20][20],int k,int m,int B[20][20],int o,int n,int C[20
         		}
        		}
 	}
+	else{
+		cout<<"no se puede multiplicar las dos matrices A y B ingrese los datos correctos"
+	}
 }
 void mostrarC(int C[20][20],int k,int n)
 {
